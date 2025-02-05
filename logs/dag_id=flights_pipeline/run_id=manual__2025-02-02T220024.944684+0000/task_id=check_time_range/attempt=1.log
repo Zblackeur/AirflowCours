@@ -1,0 +1,21 @@
+[2025-02-02T22:00:43.360+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-02T22:00:44.028+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flights_pipeline.check_time_range manual__2025-02-02T22:00:24.944684+00:00 [queued]>
+[2025-02-02T22:00:44.047+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flights_pipeline.check_time_range manual__2025-02-02T22:00:24.944684+00:00 [queued]>
+[2025-02-02T22:00:44.049+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2025-02-02T22:00:46.808+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): check_time_range> on 2025-02-02 22:00:24.944684+00:00
+[2025-02-02T22:00:46.820+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=7859) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-02T22:00:46.823+0000] {standard_task_runner.py:72} INFO - Started process 7924 to run task
+[2025-02-02T22:00:46.824+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flights_pipeline', 'check_time_range', 'manual__2025-02-02T22:00:24.944684+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/zdag.py', '--cfg-path', '/tmp/tmpm3jxcw1t']
+[2025-02-02T22:00:46.826+0000] {standard_task_runner.py:105} INFO - Job 130: Subtask check_time_range
+[2025-02-02T22:00:46.897+0000] {task_command.py:467} INFO - Running <TaskInstance: flights_pipeline.check_time_range manual__2025-02-02T22:00:24.944684+00:00 [running]> on host d628bd12729b
+[2025-02-02T22:00:46.995+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='flights_pipeline' AIRFLOW_CTX_TASK_ID='check_time_range' AIRFLOW_CTX_EXECUTION_DATE='2025-02-02T22:00:24.944684+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-02T22:00:24.944684+00:00'
+[2025-02-02T22:00:46.997+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-02T22:00:47.036+0000] {logging_mixin.py:190} INFO - Temps min et max vérifiés : min=None, max=None
+[2025-02-02T22:00:47.050+0000] {python.py:240} INFO - Done. Returned value was: {'min_time_position': None, 'max_time_position': None}
+[2025-02-02T22:00:47.088+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-02T22:00:47.090+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flights_pipeline, task_id=check_time_range, run_id=manual__2025-02-02T22:00:24.944684+00:00, execution_date=20250202T220024, start_date=20250202T220044, end_date=20250202T220047
+[2025-02-02T22:00:47.122+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-02-02T22:00:47.149+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-02T22:00:47.154+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

@@ -1,0 +1,21 @@
+[2025-02-02T19:22:34.793+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-02T19:22:34.803+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flights_pipeline.create_or_truncate_table manual__2025-02-02T19:22:29.558027+00:00 [queued]>
+[2025-02-02T19:22:34.808+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flights_pipeline.create_or_truncate_table manual__2025-02-02T19:22:29.558027+00:00 [queued]>
+[2025-02-02T19:22:34.810+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2025-02-02T19:22:34.820+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): create_or_truncate_table> on 2025-02-02 19:22:29.558027+00:00
+[2025-02-02T19:22:34.826+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1510) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-02T19:22:34.827+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flights_pipeline', 'create_or_truncate_table', 'manual__2025-02-02T19:22:29.558027+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/zdag.py', '--cfg-path', '/tmp/tmpd2teq65x']
+[2025-02-02T19:22:34.828+0000] {standard_task_runner.py:72} INFO - Started process 1542 to run task
+[2025-02-02T19:22:34.829+0000] {standard_task_runner.py:105} INFO - Job 52: Subtask create_or_truncate_table
+[2025-02-02T19:22:34.861+0000] {task_command.py:467} INFO - Running <TaskInstance: flights_pipeline.create_or_truncate_table manual__2025-02-02T19:22:29.558027+00:00 [running]> on host d628bd12729b
+[2025-02-02T19:22:34.907+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='flights_pipeline' AIRFLOW_CTX_TASK_ID='create_or_truncate_table' AIRFLOW_CTX_EXECUTION_DATE='2025-02-02T19:22:29.558027+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-02T19:22:29.558027+00:00'
+[2025-02-02T19:22:34.908+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-02T19:22:35.004+0000] {logging_mixin.py:190} INFO - Table created or truncated successfully.
+[2025-02-02T19:22:35.039+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-02T19:22:35.046+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-02T19:22:35.047+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flights_pipeline, task_id=create_or_truncate_table, run_id=manual__2025-02-02T19:22:29.558027+00:00, execution_date=20250202T192229, start_date=20250202T192234, end_date=20250202T192235
+[2025-02-02T19:22:35.726+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-02-02T19:22:35.750+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-02T19:22:35.753+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

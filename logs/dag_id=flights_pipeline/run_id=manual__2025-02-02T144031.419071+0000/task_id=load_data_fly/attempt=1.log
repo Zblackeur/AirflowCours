@@ -1,0 +1,21 @@
+[2025-02-02T14:40:36.618+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-02T14:40:36.643+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flights_pipeline.load_data_fly manual__2025-02-02T14:40:31.419071+00:00 [queued]>
+[2025-02-02T14:40:36.655+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flights_pipeline.load_data_fly manual__2025-02-02T14:40:31.419071+00:00 [queued]>
+[2025-02-02T14:40:36.661+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 1
+[2025-02-02T14:40:36.675+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): load_data_fly> on 2025-02-02 14:40:31.419071+00:00
+[2025-02-02T14:40:36.681+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=488) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-02T14:40:36.683+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flights_pipeline', 'load_data_fly', 'manual__2025-02-02T14:40:31.419071+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/zdag.py', '--cfg-path', '/tmp/tmptqb6p3j4']
+[2025-02-02T14:40:36.684+0000] {standard_task_runner.py:72} INFO - Started process 520 to run task
+[2025-02-02T14:40:36.686+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask load_data_fly
+[2025-02-02T14:40:36.734+0000] {task_command.py:467} INFO - Running <TaskInstance: flights_pipeline.load_data_fly manual__2025-02-02T14:40:31.419071+00:00 [running]> on host 9c60fb534bff
+[2025-02-02T14:40:36.795+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='flights_pipeline' AIRFLOW_CTX_TASK_ID='load_data_fly' AIRFLOW_CTX_EXECUTION_DATE='2025-02-02T14:40:31.419071+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-02T14:40:31.419071+00:00'
+[2025-02-02T14:40:36.797+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-02T14:40:36.846+0000] {logging_mixin.py:190} INFO - IO Error: The file "/opt/***/dags/data/db_test" exists, but it is not a valid DuckDB database file!
+[2025-02-02T14:40:36.848+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-02T14:40:36.860+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-02T14:40:36.861+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=flights_pipeline, task_id=load_data_fly, run_id=manual__2025-02-02T14:40:31.419071+00:00, execution_date=20250202T144031, start_date=20250202T144036, end_date=20250202T144036
+[2025-02-02T14:40:36.902+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-02-02T14:40:36.922+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-02T14:40:36.927+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

@@ -1,0 +1,172 @@
+[2025-02-02T19:35:51.248+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-02T19:35:51.258+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: flights_pipeline.load_data_into_duckdb manual__2025-02-02T19:35:41.450846+00:00 [queued]>
+[2025-02-02T19:35:51.264+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: flights_pipeline.load_data_into_duckdb manual__2025-02-02T19:35:41.450846+00:00 [queued]>
+[2025-02-02T19:35:51.266+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 2
+[2025-02-02T19:35:51.274+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): load_data_into_duckdb> on 2025-02-02 19:35:41.450846+00:00
+[2025-02-02T19:35:51.279+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1969) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-02T19:35:51.279+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'flights_pipeline', 'load_data_into_duckdb', 'manual__2025-02-02T19:35:41.450846+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/zdag.py', '--cfg-path', '/tmp/tmpessxmm56']
+[2025-02-02T19:35:51.280+0000] {standard_task_runner.py:72} INFO - Started process 2001 to run task
+[2025-02-02T19:35:51.280+0000] {standard_task_runner.py:105} INFO - Job 57: Subtask load_data_into_duckdb
+[2025-02-02T19:35:51.311+0000] {task_command.py:467} INFO - Running <TaskInstance: flights_pipeline.load_data_into_duckdb manual__2025-02-02T19:35:41.450846+00:00 [running]> on host d628bd12729b
+[2025-02-02T19:35:51.360+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='flights_pipeline' AIRFLOW_CTX_TASK_ID='load_data_into_duckdb' AIRFLOW_CTX_EXECUTION_DATE='2025-02-02T19:35:41.450846+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-02T19:35:41.450846+00:00'
+[2025-02-02T19:35:51.365+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-02-02T19:35:52.046+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'e80218', 'callsign': 'LAN407  ', 'origin_country': 'Chile', 'time_position': None, 'last_contact': 1738524944, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 257.83, 'true_track': 219.09, 'vertical_rate': 0, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:52.067+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'a09dc5', 'callsign': '', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524863, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 63.49, 'true_track': 85.35, 'vertical_rate': 1.95, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:52.135+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'e0b244', 'callsign': 'ARG1246 ', 'origin_country': 'Argentina', 'time_position': None, 'last_contact': 1738524945, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 230.91, 'true_track': 36.03, 'vertical_rate': 0, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:52.160+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': '471f9e', 'callsign': 'WMT3MM  ', 'origin_country': 'Hungary', 'time_position': None, 'last_contact': 1738524946, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 81.8, 'true_track': 0.36, 'vertical_rate': 13, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:52.198+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'a951d1', 'callsign': 'N7WA    ', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524927, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 77.76, 'true_track': 22.15, 'vertical_rate': 0.33, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:52.204+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'e4803d', 'callsign': 'TAM8143 ', 'origin_country': 'Brazil', 'time_position': None, 'last_contact': 1738524945, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 224.42, 'true_track': 39.42, 'vertical_rate': -0.33, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:52.299+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'e073cf', 'callsign': 'ARG1229 ', 'origin_country': 'Argentina', 'time_position': None, 'last_contact': 1738524945, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 238.01, 'true_track': 221.41, 'vertical_rate': 0, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:52.311+0000] {logging_mixin.py:190} INFO - Doublon ignoré: ['e0268f', '', 'Argentina', 1738524945, 1738524945, -58.4128, -34.5593, None, True, 3.86, 135, None, None, None, None, False, 0, 0] - Error: Constraint Error: PRIMARY KEY or UNIQUE constraint violated: duplicate key ", 1738524945, 1738524945"
+[2025-02-02T19:35:52.586+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': '407b8e', 'callsign': '', 'origin_country': 'United Kingdom', 'time_position': None, 'last_contact': 1738524906, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 7.46, 'true_track': 90, 'vertical_rate': None, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:52.655+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'e4932b', 'callsign': 'AZU2732 ', 'origin_country': 'Brazil', 'time_position': None, 'last_contact': 1738524944, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 241.56, 'true_track': 236.38, 'vertical_rate': 0, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:52.663+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': '3c654d', 'callsign': '', 'origin_country': 'Germany', 'time_position': None, 'last_contact': 1738524706, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 4.63, 'true_track': 90, 'vertical_rate': None, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:53.322+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'acbb63', 'callsign': 'N91966  ', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524945, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 34.66, 'true_track': 174.04, 'vertical_rate': 2.28, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:54.185+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': '471fa2', 'callsign': 'WZZ8215 ', 'origin_country': 'Hungary', 'time_position': None, 'last_contact': 1738524939, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 192.81, 'true_track': 322.92, 'vertical_rate': 3.58, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:55.113+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'ab5e9b', 'callsign': 'SWA2539 ', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524943, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 0, 'true_track': 59.06, 'vertical_rate': None, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:56.945+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': '3823ff', 'callsign': '', 'origin_country': 'France', 'time_position': None, 'last_contact': 1738524687, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 1.03, 'true_track': 255.94, 'vertical_rate': None, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:58.072+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'a8a614', 'callsign': 'N6565J  ', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524945, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 55.45, 'true_track': 332.96, 'vertical_rate': 0.98, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:58.273+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'a04243', 'callsign': '', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524824, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 6.17, 'true_track': 67.5, 'vertical_rate': None, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:58.849+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'a04254', 'callsign': 'N11585  ', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524660, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 50.93, 'true_track': 135, 'vertical_rate': -1.95, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:59.260+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': '48440f', 'callsign': '', 'origin_country': 'Kingdom of the Netherlands', 'time_position': None, 'last_contact': 1738524786, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 180.57, 'true_track': 170.32, 'vertical_rate': -8.78, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:59.705+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'a40b9d', 'callsign': 'N36TA   ', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524940, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 96.45, 'true_track': 11.07, 'vertical_rate': 0, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:35:59.895+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'a12747', 'callsign': 'CXK683  ', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524927, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 62.97, 'true_track': 72.9, 'vertical_rate': -0.33, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:36:01.639+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'e071cb', 'callsign': 'ARG1298 ', 'origin_country': 'Argentina', 'time_position': None, 'last_contact': 1738524944, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 230.2, 'true_track': 47.9, 'vertical_rate': -0.33, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:36:01.764+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'e49d21', 'callsign': 'AZU8763 ', 'origin_country': 'Brazil', 'time_position': None, 'last_contact': 1738524944, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 156.45, 'true_track': 46.07, 'vertical_rate': -6.18, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:36:02.022+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': '440128', 'callsign': 'EJU906Q ', 'origin_country': 'Austria', 'time_position': None, 'last_contact': 1738524945, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 6.94, 'true_track': 225, 'vertical_rate': None, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 1}
+[2025-02-02T19:36:02.633+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'a5ca32', 'callsign': '', 'origin_country': 'United States', 'time_position': None, 'last_contact': 1738524919, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 48.43, 'true_track': 273.04, 'vertical_rate': 0.33, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:36:03.311+0000] {logging_mixin.py:190} INFO - Skipping row with NULL time_position: {'icao24': 'c81a02', 'callsign': '', 'origin_country': 'New Zealand', 'time_position': None, 'last_contact': 1738524935, 'longitude': None, 'latitude': None, 'baro_altitude': None, 'on_ground': False, 'velocity': 0, 'true_track': 75.94, 'vertical_rate': None, 'sensors': None, 'geo_altitude': None, 'squawk': None, 'spi': False, 'position_source': 0, 'category': 0}
+[2025-02-02T19:36:03.871+0000] {logging_mixin.py:190} INFO - Doublon ignoré: ['aaf3d4', '', 'United States', 1738524944, 1738524944, -96.033, 29.5937, 548.64, False, 49.87, 222.91, -6.18, None, 601.98, None, False, 0, 0] - Error: Constraint Error: Duplicate key "callsign: , time_position: 1738524944, last_contact: 1738524944" violates primary key constraint. If this is an unexpected constraint violation please double check with the known index limitations section in our documentation (https://duckdb.org/docs/sql/indexes).
+[2025-02-02T19:36:03.922+0000] {taskinstance.py:3301} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/zdag.py", line 105, in load_data_into_duckdb
+    conn.execute(f"INSERT INTO openskynetwork_brute VALUES ({placeholders})", tuple(values))
+duckdb.duckdb.ConstraintException: Constraint Error: Duplicate key "callsign: , time_position: 1738524944, last_contact: 1738524944" violates primary key constraint. If this is an unexpected constraint violation please double check with the known index limitations section in our documentation (https://duckdb.org/docs/sql/indexes).
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/airflow/dags/zdag.py", line 108, in load_data_into_duckdb
+    conn.rollback() #annuler l'insertion en doublon
+    ^^^^^^^^^^^^^^^
+duckdb.duckdb.TransactionException: TransactionContext Error: cannot rollback - no transaction is active
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/zdag.py", line 118, in load_data_into_duckdb
+    conn.rollback()
+duckdb.duckdb.TransactionException: TransactionContext Error: cannot rollback - no transaction is active
+[2025-02-02T19:36:03.958+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=flights_pipeline, task_id=load_data_into_duckdb, run_id=manual__2025-02-02T19:35:41.450846+00:00, execution_date=20250202T193541, start_date=20250202T193551, end_date=20250202T193603
+[2025-02-02T19:36:03.970+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-02-02T19:36:03.971+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 57 for task load_data_into_duckdb (TransactionContext Error: cannot rollback - no transaction is active; 2001)
+Traceback (most recent call last):
+  File "/opt/airflow/dags/zdag.py", line 105, in load_data_into_duckdb
+    conn.execute(f"INSERT INTO openskynetwork_brute VALUES ({placeholders})", tuple(values))
+duckdb.duckdb.ConstraintException: Constraint Error: Duplicate key "callsign: , time_position: 1738524944, last_contact: 1738524944" violates primary key constraint. If this is an unexpected constraint violation please double check with the known index limitations section in our documentation (https://duckdb.org/docs/sql/indexes).
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/airflow/dags/zdag.py", line 108, in load_data_into_duckdb
+    conn.rollback() #annuler l'insertion en doublon
+    ^^^^^^^^^^^^^^^
+duckdb.duckdb.TransactionException: TransactionContext Error: cannot rollback - no transaction is active
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2995, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3149, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3173, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/zdag.py", line 118, in load_data_into_duckdb
+    conn.rollback()
+duckdb.duckdb.TransactionException: TransactionContext Error: cannot rollback - no transaction is active
+[2025-02-02T19:36:04.010+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 1
+[2025-02-02T19:36:04.022+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-02-02T19:36:04.031+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
